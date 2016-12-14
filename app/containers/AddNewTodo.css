@@ -1,0 +1,29 @@
+.add-new-todo-form {
+	display: flex;
+
+	height: 44px;
+	margin-bottom: 15px;
+}
+.add-new-todo-form .new-todo-name {
+	padding-right: 5px;
+	padding-left: 5px;
+
+	font-size: 1.6rem;
+
+	flex-grow: 1;
+}
+.add-new-todo-form .add-new-btn {
+	cursor: pointer;
+
+	color: #fff;
+	border: none;
+	background-color: #3f51b5;
+
+	font-size: 1.6rem;
+
+	flex-basis: 90px;
+}
+
+.add-new-todo-form .add-new-btn:disabled {
+	color: #ddd;	background-color: #878eb5;
+}
