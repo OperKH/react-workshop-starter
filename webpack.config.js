@@ -23,7 +23,12 @@ module.exports = {
     loaders: [
       {
         test: /\.js?$/,
-        loaders: ['babel'],
+        loader: 'babel',
+        query: {
+          cacheDirectory: true,
+          plugins: ['transform-runtime'],
+          presets: ['react', 'es2015', 'es2017'],
+        },
         include: path.join(__dirname, 'app')
       },
       {
