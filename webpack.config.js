@@ -27,7 +27,7 @@ module.exports = {
         query: {
           cacheDirectory: true,
           plugins: ['transform-runtime'],
-          presets: ['react', 'es2015', 'es2017'],
+          presets: ['react', 'es2015', 'stage-0'],
         },
         include: path.join(__dirname, 'app')
       },
