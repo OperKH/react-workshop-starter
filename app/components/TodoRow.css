@@ -1,15 +1,17 @@
 .todo-row-wrapper {
 	display: flex;
 
+	box-shadow: 1px 1px 4px rgba(128,128,128,.8);
+
 	align-items: center;
 }
 
 .todo-row-wrapper .todo-label {
 	display: flex;
-	flex-grow: 1;
 
 	min-height: 4rem;
 
+	flex-grow: 1;
 	align-items: center;
 }
 
@@ -32,8 +34,9 @@
 }
 
 .todo-row-wrapper .todo-label > .text {
-	flex-grow: 1;
 	line-height: 40px;
+
+	flex-grow: 1;
 }
 
 .todo-row-wrapper .todo-label,
@@ -44,6 +47,7 @@
 
 .todo-row-wrapper .edit-todo-form {
 	display: flex;
+
 	flex-grow: 1;
 	align-self: stretch;
 }
@@ -53,6 +57,7 @@
 }
 
 .todo-row-wrapper .edit-todo-form .text {
-	flex-grow: 1;
 	font-size: 1.6rem;
+
+	flex-grow: 1;
 }

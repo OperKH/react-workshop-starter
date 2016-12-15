@@ -3,6 +3,8 @@
 
 	height: 44px;
 	margin-bottom: 15px;
+
+	box-shadow: 1px 1px 4px rgba(128,128,128,.8);
 }
 .add-new-todo-form .new-todo-name {
 	padding-right: 5px;
