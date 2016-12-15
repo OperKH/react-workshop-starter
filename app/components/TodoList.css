@@ -3,3 +3,7 @@
 
 	list-style: none;
 }
+
+.todo-list li {
+	margin-bottom: 5px;
+}

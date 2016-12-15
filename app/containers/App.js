@@ -39,13 +39,21 @@ class App extends Component {
 		});
 	}
 
+	changeTodoName = (change) => {
+		const {id, name} = change;
+		const { todoList } = this.state;
+		this.setState({
+			todoList: todoList.map(todo => todo.id === id ? {...todo, name} : todo )
+		});
+	}
+
 	render() {
 		const { todoList } = this.state;
 		return (
 			<section className="todo-wrapper">
 				<h2>Todo:</h2>
 				<AddNewTodo addNewTodo={this.addNewTodo} />
-				<TodoList todos={todoList} toggleTodo={this.toggleTodo} deleteTodo={this.deleteTodo} />
+				<TodoList todos={todoList} toggleTodo={this.toggleTodo} deleteTodo={this.deleteTodo} changeTodoName={this.changeTodoName} />
 			</section>
 		);
 	}

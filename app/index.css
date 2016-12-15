@@ -6,3 +6,26 @@
 body {
 	all: unset;
 }
+
+button {
+	padding-right: 15px;
+	padding-left: 15px;
+
+	cursor: pointer;
+
+	color: #fff;
+	border: none;
+	background-color: #3f51b5;
+}
+button:disabled {
+	color: #ddd;
+	background-color: #878eb5;
+}
+
+button[type="reset"] {
+	background-color: #ff5722;
+}
+
+button[type="reset"]:disabled {
+	background-color: #ffa78b;
+}

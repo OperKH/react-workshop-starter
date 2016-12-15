@@ -6,6 +6,7 @@
 
 .todo-row-wrapper .todo-label {
 	display: flex;
+	flex-grow: 1;
 
 	min-height: 4rem;
 
@@ -26,8 +27,32 @@
 	line-height: 3rem;
 }
 
+.todo-row-wrapper .todo-label .checkbox:checked + .text {
+	text-decoration: line-through;
+}
+
+.todo-row-wrapper .todo-label > .text {
+	flex-grow: 1;
+	line-height: 40px;
+}
+
 .todo-row-wrapper .todo-label,
 .todo-row-wrapper .todo-label .checkbox,
 .todo-row-wrapper .delete-todo {
 	cursor: pointer;
+}
+
+.todo-row-wrapper .edit-todo-form {
+	display: flex;
+	flex-grow: 1;
+	align-self: stretch;
+}
+
+.todo-row-wrapper .edit-todo-form > *:not(:first-child) {
+	margin-left: 5px;
+}
+
+.todo-row-wrapper .edit-todo-form .text {
+	flex-grow: 1;
+	font-size: 1.6rem;
 }

@@ -23,7 +23,7 @@ class AddNewTodo extends Component {
 		e.preventDefault();
 		const { todoName } = this.state;
 		const { addNewTodo } = this.props;
-		addNewTodo(todoName);
+		addNewTodo(todoName.trim());
 		this.setState({
 			todoName: defaultTodoName
 		});
@@ -34,7 +34,7 @@ class AddNewTodo extends Component {
 		return (
 			<form className="add-new-todo-form" onSubmit={this.formSubmit}>
 				<input type="text" className="new-todo-name" value={todoName} onChange={this.inputChange}/>
-				<button className="add-new-btn" disabled={!todoName}>Add</button>
+				<button className="add-new-btn" disabled={!todoName.trim()}>Add</button>
 			</form>
 		);
 	}
