@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import AddNewTodo from './AddNewTodo';
+import AddNewTodo from '../components/AddNewTodo';
 import TodoList from '../components/TodoList';
 import TodoFilters from '../components/TodoFilters';
 
