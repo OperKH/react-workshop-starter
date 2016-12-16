@@ -13,7 +13,6 @@ class TodoFilters extends Component {
 	}
 
 	render() {
-		console.log('Render TodoFilters');
 		const { changeTodoFilter, isCompleteFilter } = this.props;
 		return (
 			<div className="filter-btn-wrapper">

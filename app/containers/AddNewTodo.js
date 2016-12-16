@@ -34,7 +34,6 @@ class AddNewTodo extends Component {
 	}
 
 	render() {
-		console.log('Render AddNewTodo');
 		const { todoName } = this.state;
 		return (
 			<form className="add-new-todo-form" onSubmit={this.formSubmit}>
