@@ -1,0 +1,21 @@
+.filter-btn-wrapper {
+	display: flex;
+
+	height: 44px;
+    margin-top: auto;
+}
+.filter-btn-wrapper .filter-btn {
+	margin-right: 5px;
+	margin-left: 5px;
+
+	color: #333;
+	background-color: #ccc;
+
+	flex-grow: 1;
+	flex-basis: 100%;
+}
+
+.filter-btn-wrapper .filter-btn.active {
+	color: #fff;
+	background-color: #3f51b5;
+}

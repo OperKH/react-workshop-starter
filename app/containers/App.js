@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AddNewTodo from './AddNewTodo';
 import TodoList from '../components/TodoList';
+import TodoFilters from '../components/TodoFilters';
 
 import { randomId } from '../utils';
 
@@ -8,7 +9,8 @@ import './App.css';
 
 class App extends Component {
 	state = {
-		todoList: []
+		todoList: [],
+		isCompleteFilter: null
 	}
 
 	addNewTodo = todoName => {
@@ -47,13 +49,23 @@ class App extends Component {
 		});
 	}
 
+	changeTodoFilter = isCompleteFilter => {
+		this.setState({isCompleteFilter});
+	}
+
+	getFilteredTodos() {
+		const { isCompleteFilter, todoList } = this.state;
+		return isCompleteFilter === null ? todoList : todoList.filter(todo => todo.isComplete === isCompleteFilter);
+	}
+
 	render() {
-		const { todoList } = this.state;
+		const { isCompleteFilter } = this.state;
 		return (
 			<section className="todo-wrapper">
 				<h2>Todo:</h2>
 				<AddNewTodo addNewTodo={this.addNewTodo} />
-				<TodoList todos={todoList} toggleTodo={this.toggleTodo} deleteTodo={this.deleteTodo} changeTodoName={this.changeTodoName} />
+				<TodoList todos={this.getFilteredTodos()} toggleTodo={this.toggleTodo} deleteTodo={this.deleteTodo} changeTodoName={this.changeTodoName} />
+				<TodoFilters changeTodoFilter={this.changeTodoFilter} isCompleteFilter={isCompleteFilter} />
 			</section>
 		);
 	}

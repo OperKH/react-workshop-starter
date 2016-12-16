@@ -12,6 +12,10 @@ class AddNewTodo extends Component {
 		todoName: defaultTodoName
 	}
 
+	shouldComponentUpdate(nextProps, nextState) {
+		return nextState.todoName !== this.state.todoName;
+	}
+
 	inputChange = e => {
 		const { value: todoName } = e.target;
 		this.setState({
@@ -30,6 +34,7 @@ class AddNewTodo extends Component {
 	}
 
 	render() {
+		console.log('Render AddNewTodo');
 		const { todoName } = this.state;
 		return (
 			<form className="add-new-todo-form" onSubmit={this.formSubmit}>
